@@ -2,6 +2,21 @@ group 'net.pizzacrust'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'cpgradle'
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            name 'jitpack'
+            url 'https://jitpack.io'
+        }
+    }
+
+    dependencies {
+        classpath group: 'com.github.EncapsulateMC', name: 'CPGradle', version: '-SNAPSHOT'
+    }
+}
 
 repositories {
     mavenCentral()
@@ -11,7 +26,15 @@ repositories {
     }
 }
 
+coderpack {
+    mapping 'http://torchpowered.gq/pizza-map-1.10.srg'
+    targetJar 'https://launcher.mojang.com/mc/game/16w20a/server/2cbcbd735cb48c8cc2bebb7b43c8afa69a923269/server.jar'
+    jarName 'remapped-minecraft.jar'
+}
+
 dependencies {
     compile group: 'net.minecraft', name: 'launchwrapper', version: '1.11'
     compile group: 'net.md-5', name: 'SpecialSource', version: '1.7.3'
+
+    compile files('libs/remapped-minecraft.jar')
 }

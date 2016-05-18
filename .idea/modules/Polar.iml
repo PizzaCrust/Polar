@@ -23,10 +23,22 @@
     <orderEntry type="library" name="Gradle: org.lwjgl.lwjgl:lwjgl-platform:2.9.1:natives-osx" level="project" />
     <orderEntry type="library" name="Gradle: org.lwjgl.lwjgl:lwjgl-platform:2.9.1:natives-linux" level="project" />
     <orderEntry type="library" name="Gradle: org.lwjgl.lwjgl:lwjgl-platform:2.9.1:natives-windows" level="project" />
-    <orderEntry type="library" name="Gradle: net.sf.jopt-simple:jopt-simple:4.5" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-api:2.0-beta9" level="project" />
     <orderEntry type="library" name="Gradle: org.ow2.asm:asm-debug-all:5.0.3" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-core:2.0-beta9" level="project" />
     <orderEntry type="library" name="Gradle: org.lwjgl.lwjgl:lwjgl:2.9.1" level="project" />
+    <orderEntry type="library" name="Gradle: net.md-5:SpecialSource:1.7.3" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.guava:guava:18.0" level="project" />
+    <orderEntry type="library" name="Gradle: net.sf.opencsv:opencsv:2.3" level="project" />
+    <orderEntry type="library" name="Gradle: net.sf.jopt-simple:jopt-simple:4.7" level="project" />
+    <orderEntry type="module-library">
+      <library name="Gradle: remapped-minecraft">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../libs/remapped-minecraft.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
