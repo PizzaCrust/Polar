@@ -13,5 +13,5 @@ repositories {
 
 dependencies {
     compile group: 'net.minecraft', name: 'launchwrapper', version: '1.11'
-    compile group: 'net.lingala.zip4j', name: 'zip4j', version: '1.3.2'
+    compile group: 'net.md-5', name: 'SpecialSource', version: '1.7.3'
 }
