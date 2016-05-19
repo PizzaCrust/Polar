@@ -5,7 +5,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassWriter;
+import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.tree.ClassNode;
+import org.objectweb.asm.tree.MethodInsnNode;
 import org.objectweb.asm.tree.MethodNode;
 
 public class PolarTransformer implements IClassTransformer {
@@ -20,9 +22,7 @@ public class PolarTransformer implements IClassTransformer {
             for (MethodNode methodNode : classNode.methods) {
                 if (methodNode.name.equals("newCmdManagerImpl")) {
                     logger.info("found method " + methodNode.name + " -> desc: " + methodNode.desc + "!");
-                    /*
-                        TODO
-                     */
+                    methodNode.instructions.insert(new MethodInsnNode(Opcodes.INVOKESTATIC, "net/polar/Loader", "init", "()V"));
                 }
             }
         }

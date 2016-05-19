@@ -32,9 +32,24 @@ coderpack {
     jarName 'remapped-minecraft.jar'
 }
 
+configurations {
+    shade
+}
+
+jar {
+    from {
+        configurations.shade.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+}
+
 dependencies {
     compile group: 'net.minecraft', name: 'launchwrapper', version: '1.11'
     compile group: 'net.md-5', name: 'SpecialSource', version: '1.7.3'
 
     compile files('libs/remapped-minecraft.jar')
+
+    shade group: 'net.minecraft', name: 'launchwrapper', version: '1.11'
+    shade group: 'net.md-5', name: 'SpecialSource', version: '1.7.3'
 }
